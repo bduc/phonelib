@@ -9,6 +9,7 @@ namespace :phonelib do
     # get metadata from google
     url = 'http://libphonenumber.googlecode.com/svn/trunk/resources/PhoneNumberMetadata.xml'
     xml_data = Net::HTTP.get_response(URI.parse(url)).body
+    xml_data.force_encoding('UTF-8')
 
     # save in file for debug
     File.open("data/PhoneNumberMetadata.xml", "w+") do |f|
