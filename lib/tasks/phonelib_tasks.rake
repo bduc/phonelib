@@ -11,7 +11,7 @@ namespace :phonelib do
     xml_data = Net::HTTP.get_response(URI.parse(url)).body
 
     # save in file for debug
-    File.open("data/PhoneNumberMetaData.xml", "w+") do |f|
+    File.open("data/PhoneNumberMetadata.xml", "w+") do |f|
       f.write(xml_data)
     end
 
